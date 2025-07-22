@@ -1,5 +1,51 @@
+@use "breakpoints" as *;
+
 @mixin center-flex {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+// $xs: 480px;
+// $sm: 768px;
+// $md: 1024px;
+// $lg: 1280px;
+// $xl: 1440px;
+
+@mixin container-responsive($fullwidth: false) {
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 0.3s ease;
+
+  @if $fullwidth {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: none;
+  } @else {
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    @include respond-xs {
+      max-width: 480px;
+    }
+
+    @include respond-sm {
+      max-width: 640px;
+    }
+
+    @include respond-md {
+      max-width: 768px;
+    }
+
+    @include respond-lg {
+      max-width: 1024px;
+    }
+
+    @include respond-xl {
+      max-width: 1280px;
+    }
+  }
 }

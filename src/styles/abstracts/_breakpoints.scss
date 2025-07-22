@@ -5,14 +5,12 @@ $md: 1024px;
 $lg: 1280px;
 $xl: 1440px;
 
-// Mixin genérico
-@mixin respond-min($size) {
-  @media (min-width: $size) {
+@mixin respond-xs {
+  @media (min-width: $xs) {
     @content;
   }
 }
 
-// Mixins por nome
 @mixin respond-sm {
   @media (min-width: $sm) {
     @content;
@@ -27,6 +25,12 @@ $xl: 1440px;
 
 @mixin respond-lg {
   @media (min-width: $lg) {
+    @content;
+  }
+}
+
+@mixin respond-xl {
+  @media (min-width: $xl) {
     @content;
   }
 }

@@ -5,12 +5,14 @@
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
-  border: 2px solid yellow;
+  border: 2px solid lightblue;
+  height: 100vh;
 
   @include container-responsive(true);
 }
 
 .container {
-  border: 2px solid green;
+  border: 2px solid lightpink;
+
   @include container-responsive();
 }
