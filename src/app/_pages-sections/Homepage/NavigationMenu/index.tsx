@@ -8,7 +8,7 @@ export default function NavigationMenuDropdown() {
       <NavigationMenu.List className={styles.List}>
         <NavigationMenu.Item>
           <NavigationMenu.Trigger className={styles.Trigger}>
-            Overview
+            Atividades
             <NavigationMenu.Icon className={styles.Icon}>
               <ChevronDownIcon />
             </NavigationMenu.Icon>
@@ -50,7 +50,7 @@ export default function NavigationMenuDropdown() {
 
         <NavigationMenu.Item>
           <Link className={styles.Trigger} href="https://github.com/mui/base-ui">
-            GitHub
+            Contatos
           </Link>
         </NavigationMenu.Item>
       </NavigationMenu.List>
