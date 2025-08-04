@@ -6,11 +6,9 @@
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
-  border: 2px solid lightblue;
   height: 100vh;
 }
 
 .container {
-  border: 2px solid lightpink;
   @include container-responsive();
 }

@@ -1,16 +1,13 @@
 @use "@/styles/abstracts" as *;
 
 .page {
+  @include container-responsive(true);
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
-  border: 2px solid yellow;
-
-  @include container-responsive(true);
 }
 
 .container {
-  border: 2px solid green;
   @include container-responsive();
 }

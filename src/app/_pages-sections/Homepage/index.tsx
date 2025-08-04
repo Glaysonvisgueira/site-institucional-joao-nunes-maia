@@ -11,7 +11,6 @@ export default function Homepage() {
       className={`${styles.page}`}
     >
       <AppBar />
-      <h2>HOMEPAGE</h2>
     </div>
   )
 }

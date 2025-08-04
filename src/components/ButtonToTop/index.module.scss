@@ -1,0 +1,47 @@
+@use "@/styles/abstracts" as *;
+
+.scrollToTop {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background-color: $brand; // Exemplo: slate-800
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+
+  &.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .progressRing {
+    stroke: $brand; // Exemplo: azul claro
+    transition: stroke-dashoffset 0.3s ease;
+  }
+
+  .icon {
+    position: relative;
+    z-index: 1;
+    font-size: 1.2rem;
+    color: $text;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

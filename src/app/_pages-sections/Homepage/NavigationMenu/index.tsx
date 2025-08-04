@@ -6,6 +6,25 @@ export default function NavigationMenuDropdown() {
   return (
     <NavigationMenu.Root className={styles.Root}>
       <NavigationMenu.List className={styles.List}>
+
+        <NavigationMenu.Item>
+          <Link className={styles.Trigger} href="https://github.com/mui/base-ui">
+            Início
+          </Link>
+        </NavigationMenu.Item>
+
+        <NavigationMenu.Item>
+          <Link className={styles.Trigger} href="https://github.com/mui/base-ui">
+            Blog
+          </Link>
+        </NavigationMenu.Item>
+
+        <NavigationMenu.Item>
+          <Link className={styles.Trigger} href="https://github.com/mui/base-ui">
+            Sobre
+          </Link>
+        </NavigationMenu.Item>
+
         <NavigationMenu.Item>
           <NavigationMenu.Trigger className={styles.Trigger}>
             Atividades
@@ -29,7 +48,7 @@ export default function NavigationMenuDropdown() {
 
         <NavigationMenu.Item>
           <NavigationMenu.Trigger className={styles.Trigger}>
-            Handbook
+            Projetos
             <NavigationMenu.Icon className={styles.Icon}>
               <ChevronDownIcon />
             </NavigationMenu.Icon>
@@ -117,22 +136,27 @@ function ArrowSvg(props: React.ComponentProps<'svg'>) {
 const overviewLinks = [
   {
     href: '/react/overview/quick-start',
-    title: 'Quick Start',
+    title: 'Palestras Públicas',
     description: 'Install and assemble your first component.',
   },
   {
     href: '/react/overview/accessibility',
-    title: 'Accessibility',
+    title: 'Evangelização Infantil',
     description: 'Learn how we build accessible components.',
   },
   {
     href: '/react/overview/releases',
-    title: 'Releases',
+    title: 'ESDE',
     description: 'See what’s new in the latest Base UI versions.',
   },
   {
     href: '/react/overview/about',
-    title: 'About',
+    title: 'Grupos de estudo',
+    description: 'Learn more about Base UI and our mission.',
+  },
+  {
+    href: '/react/overview/creche',
+    title: 'Creche Fernando Miramez',
     description: 'Learn more about Base UI and our mission.',
   },
 ] as const;

@@ -1,10 +1,9 @@
-@use "../../../../styles/abstracts/index.scss" as *;
+@use "@styles/abstracts/index.scss" as *;
 
 .Root {
-  // background-color: var(--color-gray-50);
   border-radius: 0.5rem;
   padding: 0.25rem;
-  color: var(--color-gray-900);
+  color: $text;
   min-width: max-content;
 }
 
@@ -28,7 +27,7 @@
   background-color: #fff;
   font-family: $font-family;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 1.5rem;
   color: $text;
   user-select: none;
@@ -51,7 +50,7 @@
 
   &:focus-visible {
     position: relative;
-    outline: 2px solid var(--color-blue);
+    outline: 2px solid $brand;
     outline-offset: -1px;
   }
 }
@@ -117,14 +116,17 @@
   position: relative;
   box-sizing: border-box;
   border-radius: 0.5rem;
-  background-color: canvas;
-  color: var(--color-gray-900);
+  background-color: #fff;
+  color: $text;
   transform-origin: var(--transform-origin);
   transition-property: opacity, transform, width, height;
   transition-duration: var(--duration);
   transition-timing-function: var(--easing);
   width: max-content;
   height: var(--popup-height);
+  outline: 2px solid $brand-light;
+  // box-shadow: 0 10px 15px -3px var(--color-gray-900),
+  //   0 4px 6px -4px var(--color-gray-600);
 
   @media (min-width: 500px) {
     width: var(--popup-width);
@@ -139,21 +141,6 @@
   &[data-ending-style] {
     transition-timing-function: ease;
     transition-duration: 0.15s;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  .Popup {
-    outline: 1px solid var(--color-gray-200);
-    box-shadow: 0 10px 15px -3px var(--color-gray-200),
-      0 4px 6px -4px var(--color-gray-200);
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .Popup {
-    outline: 1px solid var(--color-gray-300);
-    outline-offset: -1px;
   }
 }
 
@@ -229,13 +216,13 @@
 
   @media (hover: hover) {
     &:hover {
-      background-color: var(--color-gray-100);
+      background-color: $brand-light;
     }
   }
 
   &:focus-visible {
     position: relative;
-    outline: 2px solid var(--color-blue);
+    outline: 2px solid $brand;
     outline-offset: -1px;
   }
 
@@ -249,15 +236,17 @@
 .LinkTitle {
   margin: 0 0 4px;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 600;
+  color: $text;
   line-height: 1.25rem;
 }
 
 .LinkDescription {
   margin: 0;
   font-size: 0.875rem;
+  font-weight: 400;
   line-height: 1.25rem;
-  color: var(--color-gray-500);
+  color: $text;
 }
 
 .Arrow {
@@ -270,7 +259,7 @@
   }
 
   &[data-side="bottom"] {
-    top: -8px;
+    top: -9px;
     rotate: 0deg;
   }
 
@@ -290,13 +279,9 @@
 }
 
 .ArrowOuterStroke {
-  @media (prefers-color-scheme: light) {
-    fill: var(--color-gray-200);
-  }
+  fill: $brand-light;
 }
 
 .ArrowInnerStroke {
-  @media (prefers-color-scheme: dark) {
-    fill: var(--color-gray-300);
-  }
+  fill: $brand-light;
 }
