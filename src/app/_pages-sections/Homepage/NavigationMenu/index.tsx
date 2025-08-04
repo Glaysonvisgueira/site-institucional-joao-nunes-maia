@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { NavigationMenu } from '@base-ui-components/react/navigation-menu';
-import styles from './styles.module.css';
+import styles from './styles.module.scss';
 
 export default function NavigationMenuDropdown() {
   return (
