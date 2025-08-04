@@ -7,12 +7,12 @@ export default function Contacts() {
     <section
       className={`${styles.page}`}
     >
-      {/* <div
+      <div
         className={`${styles.container}`}
       >
         Dentro do container
-      </div> */}
-      <h2>CONTATOS</h2>
+      </div>
+
     </section>
   )
 }

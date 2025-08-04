@@ -1,4 +1,4 @@
-@use '../../../styles/abstracts/variables' as *;
+@use "../../../styles/abstracts/variables" as *;
 
 .button {
   padding: 16px 32px;
@@ -7,6 +7,7 @@
   border-radius: $radius-pill;
   cursor: pointer;
   font-weight: 600;
+  font-family: $font-family;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -27,15 +28,19 @@
   &:hover:not(:disabled) {
     background-color: darken($brand, 10%);
   }
+
+  &:active:not(:disabled) {
+    background-color: darken($brand, 15%);
+  }
 }
 
 .text {
-    background: transparent;
-    color: $brand;
-    
-    &:hover:not(:disabled) {
-        background-color: rgba($brand, 0.4);
-    }
+  background: transparent;
+  color: $brand;
+
+  &:hover:not(:disabled) {
+    background-color: rgba($brand, 0.4);
+  }
 }
 
 .outlined {

@@ -1,3 +1,5 @@
+@use "@/styles/abstracts" as *;
+
 .page {
   display: flex;
   align-items: flex-start;
@@ -5,4 +7,23 @@
   flex-direction: column;
   min-height: 100svh;
   height: 100%;
+
+  // &::-webkit-scrollbar {
+  //   width: 8px;
+  // }
+
+  // &::-webkit-scrollbar-track {
+  //   background: transparent;
+  // }
+
+  // &::-webkit-scrollbar-thumb {
+  //   background-color: $brand;
+  //   border-radius: 6px;
+  //   border: 2px solid transparent;
+  //   background-clip: content-box;
+  // }
+
+  // // Scrollbar para Firefox
+  // scrollbar-width: thin;
+  // scrollbar-color: $brand transparent;
 }

@@ -27,7 +27,7 @@
   background-color: #fff;
   font-family: $font-family;
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.5rem;
   color: $text;
   user-select: none;
@@ -147,7 +147,7 @@
 .Content {
   transition: opacity calc(var(--duration) * 0.5) ease,
     transform var(--duration) var(--easing);
-  padding: 1.5rem;
+  padding: 0.875rem;
   width: calc(100vw - 40px);
   height: 100%;
 
@@ -236,6 +236,7 @@
 .LinkTitle {
   margin: 0 0 4px;
   font-size: 1rem;
+  font-family: $font-family;
   font-weight: 600;
   color: $text;
   line-height: 1.25rem;
@@ -244,6 +245,7 @@
 .LinkDescription {
   margin: 0;
   font-size: 0.875rem;
+  font-family: $font-family;
   font-weight: 400;
   line-height: 1.25rem;
   color: $text;
