@@ -68,7 +68,7 @@ export default function NavigationMenuDropdown() {
         </NavigationMenu.Item>
 
         <NavigationMenu.Item>
-          <Link className={styles.Trigger} href="https://github.com/mui/base-ui">
+          <Link className={styles.Trigger} href="#contatos">
             Contatos
           </Link>
         </NavigationMenu.Item>

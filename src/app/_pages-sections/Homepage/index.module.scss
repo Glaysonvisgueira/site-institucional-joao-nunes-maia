@@ -15,7 +15,8 @@
   background-color: #808080;
   border-bottom: 6px solid $brand;
 
-  height: 650px;
+  height: 100%;
+  min-height: 850px;
   padding: 2rem;
   display: flex;
   align-items: flex-end;
