@@ -1,32 +1,29 @@
 // Breakpoints diretos
-$xs: 0px;
-$sm: 480px;
-$md: 768px;
-$lg: 1024px;
-$xl: 1280px;
+$xs: 480px;
+$sm: 768px;
+$md: 1024px;
+$lg: 1280px;
+$xl: 1440px;
+
+// Mui breakpoints
+// xs, extra-small: 0px
+// sm, small: 600px
+// md, medium: 900px
+// lg, large: 1200px
+// xl, extra-large: 1536px
 
 @mixin respond-xs {
-  @media (min-width: $xs) and (max-width: #{$sm - 1px}) {
-    @content;
-  }
+  @media (min-width: $xs) { @content; }
 }
 @mixin respond-sm {
-  @media (min-width: $sm) and (max-width: #{$md - 1px}) {
-    @content;
-  }
+  @media (min-width: $sm) { @content; }
 }
 @mixin respond-md {
-  @media (min-width: $md) and (max-width: #{$lg - 1px}) {
-    @content;
-  }
+  @media (min-width: $md) { @content; }
 }
 @mixin respond-lg {
-  @media (min-width: $lg) and (max-width: #{$xl - 1px}) {
-    @content;
-  }
+  @media (min-width: $lg) { @content; }
 }
 @mixin respond-xl {
-  @media (min-width: $xl) {
-    @content;
-  }
+  @media (min-width: $xl) { @content; }
 }
