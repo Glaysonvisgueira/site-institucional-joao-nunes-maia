@@ -8,8 +8,6 @@
 
 @mixin container-responsive($fullwidth: false) {
   width: 100%;
-  padding-left: 1rem;
-  padding-right: 1rem;
   margin-left: auto;
   margin-right: auto;
   transition: all 0.3s ease;
@@ -21,27 +19,27 @@
   } @else {
     @include responsive(xs) {
       max-width: 95%;
-      border: 2px solid blue;
+      // border: 2px solid blue;
     }
 
     @include responsive(sm) {
       max-width: 95%;
-      border: 2px solid green;
+      // border: 2px solid green;
     }
 
     @include responsive(md) {
       max-width: 90%;
-      border: 2px solid lightsalmon;
+      // border: 2px solid lightsalmon;
     }
 
     @include responsive(lg) {
       max-width: 80%;
-      border: 2px solid yellow;
+      // border: 2px solid yellow;
     }
 
     @include responsive(xl) {
       max-width: 70%;
-      border: 2px solid red;
+      // border: 2px solid red;
     }
   }
 }

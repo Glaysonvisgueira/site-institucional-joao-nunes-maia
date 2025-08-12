@@ -13,6 +13,7 @@ import { FaFacebookSquare } from "react-icons/fa";
 
 //Custom components
 import TitleSection from '@/components/TitleSection';
+import { Button } from '@components/ui/Button';
 
 interface CardProps {
   icon: ReactNode;
@@ -44,6 +45,24 @@ export default function Blog() {
       />
 
       <div className={styles.container}>
+
+        <div className={styles.containerBlogAllPosts}>
+          <div className={styles.texts}>
+            <h3>Últimas postagens</h3>
+            <span>Acesse os últimos conteúdos</span>
+          </div>
+
+          <div>
+            <Button variant='outlined'>Ver todos</Button>
+          </div>
+
+        </div>
+
+        <div className={styles.grid}>
+          <div className={styles.card} />
+          <div className={styles.card} />
+          <div className={styles.card} />
+        </div>
 
       </div>
 
