@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: center;
 }
+
 @mixin container-responsive($fullwidth: false) {
   width: 100%;
   padding-left: 1rem;
@@ -18,26 +19,27 @@
     padding-right: 0;
     max-width: none;
   } @else {
-    
-    max-width: 95%;
-    border: 2px solid lightblue;
-
-    @include respond-sm {
+    @include responsive(xs) {
       max-width: 95%;
       border: 2px solid blue;
     }
 
-    @include respond-md {
-      max-width: 80%;
+    @include responsive(sm) {
+      max-width: 95%;
       border: 2px solid green;
     }
 
-    @include respond-lg {
+    @include responsive(md) {
+      max-width: 90%;
+      border: 2px solid lightsalmon;
+    }
+
+    @include responsive(lg) {
       max-width: 80%;
       border: 2px solid yellow;
     }
 
-    @include respond-xl {
+    @include responsive(xl) {
       max-width: 70%;
       border: 2px solid red;
     }

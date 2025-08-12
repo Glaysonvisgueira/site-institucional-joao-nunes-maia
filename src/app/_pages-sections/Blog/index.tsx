@@ -43,6 +43,10 @@ export default function Blog() {
         subtitle="Navegue pelas postagens do blog e fique por dentro de nossos projetos e ações sociais"
       />
 
+      <div className={styles.container}>
+
+      </div>
+
 
 
     </section>

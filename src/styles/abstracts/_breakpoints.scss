@@ -1,29 +1,27 @@
-// Breakpoints diretos
-$xs: 480px;
-$sm: 768px;
-$md: 1024px;
-$lg: 1280px;
-$xl: 1440px;
+$breakpoints: (
+  xs: 480px,
+  sm: 768px,
+  md: 1024px,
+  lg: 1280px,
+  xl: 1440px,
+);
 
-// Mui breakpoints
-// xs, extra-small: 0px
-// sm, small: 600px
-// md, medium: 900px
-// lg, large: 1200px
-// xl, extra-large: 1536px
+// @mixin responsive($size) {
+//   $max: map-get($breakpoints, $size);
 
-@mixin respond-xs {
-  @media (min-width: $xs) { @content; }
-}
-@mixin respond-sm {
-  @media (min-width: $sm) { @content; }
-}
-@mixin respond-md {
-  @media (min-width: $md) { @content; }
-}
-@mixin respond-lg {
-  @media (min-width: $lg) { @content; }
-}
-@mixin respond-xl {
-  @media (min-width: $xl) { @content; }
+//   @media (max-width: #{$max}) {
+//     @content;
+//   }
+// }
+
+@mixin responsive($size, $direction: up) {
+  $value: map-get($breakpoints, $size);
+
+  @if $direction == up {
+    @media (max-width: #{$value}) {
+      @content;
+    }
+  } @else {
+    @error "Direção inválida: use `up` ou `down`.";
+  }
 }
