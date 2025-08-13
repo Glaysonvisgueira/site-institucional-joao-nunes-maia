@@ -1,10 +1,10 @@
 import styles from "./page.module.scss";
 
 //Sections
-import Homepage from "./_pages-sections/Homepage";
-import Blog from "./_pages-sections/Blog";
-import Contacts from "./_pages-sections/Contacts";
-import Footer from "./_pages-sections/Footer";
+import Homepage from "../components/PagesSections/Homepage";
+import Blog from "../components/PagesSections/Blog";
+import Contacts from "../components/PagesSections/Contacts";
+import Footer from "../components/PagesSections/Footer";
 
 import ButtonGoToTop from '@components/ButtonToTop';
 

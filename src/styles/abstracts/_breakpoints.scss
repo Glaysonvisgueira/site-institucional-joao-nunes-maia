@@ -6,19 +6,19 @@ $breakpoints: (
   xl: 1440px,
 );
 
-// @mixin responsive($size) {
-//   $max: map-get($breakpoints, $size);
-
-//   @media (max-width: #{$max}) {
-//     @content;
-//   }
-// }
-
 @mixin responsive($size, $direction: up) {
   $value: map-get($breakpoints, $size);
 
-  @if $direction == up {
+  @if $size == xl {
+    @media (min-width: #{$value}) {
+      @content;
+    }
+  } @else if $direction == up {
     @media (max-width: #{$value}) {
+      @content;
+    }
+  } @else if $direction == down {
+    @media (min-width: #{$value}) {
       @content;
     }
   } @else {
