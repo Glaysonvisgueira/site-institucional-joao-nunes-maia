@@ -17,20 +17,9 @@
   justify-content: flex-start;
   gap: 20px;
 
-  // @include respond-sm {
-  //   flex-direction: column;
-  //   align-items: center;
-  //   justify-content: center;
-
-  //   .grid {
-  //     width: 100%;
-  //     background-color: red;
-  //   }
-
-  //   .mapContainer {
-  //     width: 100%;
-  //   }
-  // }
+    @include responsive(md) {
+    flex-direction: column;
+  }
 
   .mapContainer {
     display: flex;

@@ -1,0 +1,22 @@
+@use "@/styles/abstracts" as *;
+
+.page {
+  @include container-responsive(true);
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 60px 0;
+}
+
+.container {
+  @include container-responsive();
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  padding: 60px 0;
+}
