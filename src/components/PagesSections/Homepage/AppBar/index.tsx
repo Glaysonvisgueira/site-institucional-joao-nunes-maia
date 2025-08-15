@@ -16,7 +16,7 @@ import { FaFacebookSquare } from "react-icons/fa";
 export default function AppBar() {
   return (
     <>
-      <div className={styles.barContacts}>
+      <div className={`${styles.barContacts} ${styles.appbarDesktop}`}>
         <div className={styles.container}>
 
 
@@ -37,7 +37,8 @@ export default function AppBar() {
           <span>A obra social João Nunes Maia</span>
         </div>
       </div>
-      <div className={styles.appbar}>
+
+      <div className={`${styles.appbar} ${styles.appbarDesktop}`}>
         <img
           style={{ marginRight: '10px' }}
           src="/svgs/logo-jnm.svg"

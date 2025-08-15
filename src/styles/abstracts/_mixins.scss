@@ -17,19 +17,14 @@
     padding-right: 0;
     max-width: none;
   } @else {
-    @include responsive(xs) {
-      max-width: 95%;
-      // border: 2px solid blue;
+    @include responsive(xl, down) {
+      max-width: 65%;
+      // border: 2px solid red;
     }
 
-    @include responsive(sm) {
-      max-width: 95%;
-      // border: 2px solid green;
-    }
-
-    @include responsive(md) {
-      max-width: 90%;
-      // border: 2px solid lightsalmon;
+    @include responsive(xl) {
+      max-width: 70%;
+      // border: 2px solid red;
     }
 
     @include responsive(lg) {
@@ -37,9 +32,19 @@
       // border: 2px solid yellow;
     }
 
-    @include responsive(xl) {
-      max-width: 70%;
-      // border: 2px solid red;
+    @include responsive(md) {
+      max-width: 90%;
+      // border: 2px solid lightsalmon;
+    }
+
+    @include responsive(sm) {
+      max-width: 95%;
+      // border: 2px solid green;
+    }
+
+    @include responsive(xs) {
+      max-width: 95%;
+      // border: 2px solid blue;
     }
   }
 }

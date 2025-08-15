@@ -1,0 +1,128 @@
+@use "@/styles/abstracts" as *;
+
+.hamburgerMenu {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  .menu {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    right: 0;
+    background: white;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    min-width: 180px;
+    z-index: 1000;
+
+    a {
+      padding: 12px 20px;
+      text-decoration: none;
+      color: black;
+      font-weight: 500;
+      font-family: $font-family;
+      font-size: 1rem;
+
+      &:hover {
+        background-color: $brand-light;
+      }
+    }
+
+    .accordionItem {
+      display: flex;
+      flex-direction: column;
+
+      .accordionToggle {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 20px;
+        width: 100%;
+        cursor: pointer;
+
+        span {
+          text-align: left;
+          font-size: 1rem;
+          font-family: $font-family;
+          font-weight: 500;
+        }
+
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+
+        &:hover {
+          background-color: $brand-light;
+        }
+      }
+
+      .accordionContent {
+        max-height: 0;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transition: max-height 0.3s ease;
+
+        a {
+          padding-left: 30px;
+        }
+      }
+
+      .openAccordion {
+        max-height: 500px;
+      }
+    }
+  }
+
+  .open {
+    max-height: 500px;
+    opacity: 1;
+  }
+}
+
+.appBar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  width: 100%;
+  background-color: $brand;
+  height: 60px;
+
+  .toggle {
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001; // acima do menu
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.appbarMobile {
+  @include responsive(md, down) {
+    display: none;
+  }
+}
+
+// .backdrop {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   background-color: rgba(0, 0, 0, 0.5);
+//   z-index: 900;
+// }

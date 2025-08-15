@@ -1,3 +1,5 @@
+@use "sass:map";
+
 $breakpoints: (
   xs: 480px,
   sm: 768px,
@@ -7,13 +9,9 @@ $breakpoints: (
 );
 
 @mixin responsive($size, $direction: up) {
-  $value: map-get($breakpoints, $size);
+  $value: map.get($breakpoints, $size);
 
-  @if $size == xl {
-    @media (min-width: #{$value}) {
-      @content;
-    }
-  } @else if $direction == up {
+  @if $direction == up {
     @media (max-width: #{$value}) {
       @content;
     }

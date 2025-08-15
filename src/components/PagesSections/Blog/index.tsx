@@ -1,5 +1,4 @@
-
-import { ReactNode } from 'react';
+'use client';
 import styles from './index.module.scss';
 
 //Icons
@@ -55,16 +54,27 @@ const CARDS: CardProps[] = [
     description: "Leitura comentada e debates sobre os princípios básicos da Doutrina Espírita, conforme a obra de Allan Kardec.",
     created_at: "30/06/2025",
     link: ""
-  }
+  },
+  {
+    title: "Palestra: A Lei de Causa e Efeito",
+    description: "Reflexão sobre como nossas ações influenciam nosso presente e futuro à luz da Doutrina Espírita.",
+    created_at: "10/08/2025",
+    link: ""
+  },
+  {
+    title: "Grupo de Estudo sobre Mediunidade",
+    description: "Estudo orientado sobre os fenômenos mediúnicos, com base nas obras de Allan Kardec e orientações de Espíritos superiores.",
+    created_at: "07/08/2025",
+    link: ""
+  },
 ];
 
-
-function Card({ 
+function Card({
   title,
   description,
   created_at,
   link
- }: CardProps) {
+}: CardProps) {
   return (
     <div className={styles.card}>
       <div>
@@ -94,6 +104,7 @@ function Card({
 }
 
 export default function Blog() {
+
   return (
     <section className={styles.page} id="blog">
 
@@ -117,9 +128,8 @@ export default function Blog() {
         </div>
 
         <div className={styles.grid}>
-
           {CARDS.map((post, index) => (
-          <Card 
+            <Card
               key={index}
               title={post.title}
               description={post.description}
@@ -127,9 +137,6 @@ export default function Blog() {
               link=""
             />
           ))}
-         
-          
-
         </div>
 
       </div>

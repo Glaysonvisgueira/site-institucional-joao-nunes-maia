@@ -1,8 +1,10 @@
+'use client';
 
 import styles from './index.module.scss';
 
 //Custom components
 import AppBar from './AppBar';
+import HamburgerMenu from './HamburgerMenu';
 import { Button } from '@/components/ui/Button';
 
 export default function Homepage() {
@@ -11,6 +13,8 @@ export default function Homepage() {
       className={`${styles.page}`}
     >
       <AppBar />
+      <HamburgerMenu />
+
       <div className={styles.containerContent}>
         <div className={styles.content}>
           <h1>Bem-vindo(a)!</h1>
