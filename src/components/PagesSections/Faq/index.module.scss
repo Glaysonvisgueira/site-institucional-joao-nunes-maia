@@ -1,0 +1,70 @@
+@use "@/styles/abstracts" as *;
+
+.page {
+  @include container-responsive(true);
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 60px 0;
+}
+
+.container {
+  @include container-responsive();
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  
+  .faqItem {
+    width: 100%;
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .question {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        svg{
+          width: 22px;
+          height: 22px;
+        }
+
+      h3{
+        font-weight: 600;
+      }
+    }
+
+    .answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+      padding-top: 0;
+      margin: 0;
+    }
+
+    &.active {
+      .answer {
+        max-height: 500px; 
+        padding-top: 1rem;
+      }
+
+       .question {
+        h3, svg{
+          color: $brand;
+        }
+    }
+    }
+  }
+}

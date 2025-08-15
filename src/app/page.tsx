@@ -4,7 +4,7 @@ import styles from "./page.module.scss";
 import Homepage from "../components/PagesSections/Homepage";
 import Blog from "../components/PagesSections/Blog";
 import AboutUs from "../components/PagesSections/AboutUs";
-
+import Faq from "../components/PagesSections/Faq";
 import Contacts from "../components/PagesSections/Contacts";
 import Footer from "../components/PagesSections/Footer";
 
@@ -15,9 +15,10 @@ export default function Home() {
     <div className={styles.page}>
       <ButtonGoToTop />
       <Homepage />
-      <AboutUs />
+      <AboutUs />      
       <Blog />
       <Contacts />
+      <Faq />
       <Footer />
     </div>
   );

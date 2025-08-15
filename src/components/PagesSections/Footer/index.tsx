@@ -13,12 +13,10 @@ export default function Footer() {
 
       </div>
 
-      {/* <div
-        className={styles.copyrightContainer}
-      >
-        <span>AAAA</span>
-        <span>AAAA</span>
-      </div> */}
+      <div className={styles.copyrightContainer}>
+        <span>Sociedade Espírita João Nunes Maia<br />CNPJ: 01.461.832/0001-78</span>
+        <span>© Todos os direitos reservados | 2025</span>
+      </div>
     </footer>
   )
 }
