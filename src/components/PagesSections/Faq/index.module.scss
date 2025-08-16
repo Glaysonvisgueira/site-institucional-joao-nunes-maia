@@ -66,5 +66,18 @@
         }
     }
     }
+
+    @include responsive(md){
+      .question{
+        h3{
+font-size: 0.875rem;
+        }
+      }
+
+      .answer{
+font-size: 0.775rem;
+
+      }
+    }
   }
 }

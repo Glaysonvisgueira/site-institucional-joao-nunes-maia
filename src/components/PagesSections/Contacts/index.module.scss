@@ -17,10 +17,6 @@
   justify-content: flex-start;
   gap: 20px;
 
-  @include responsive(md) {
-    flex-direction: column;
-  }
-
   .mapContainer {
     display: flex;
     align-items: flex-start;
@@ -104,23 +100,35 @@
           font-family: $font-family;
           color: $text;
           font-weight: 600;
+          flex-wrap: wrap;
         }
 
         span {
           font-family: $font-family;
           color: $text;
+          flex-wrap: wrap;  
         }
       }
     }
   }
 
-  @include responsive(xs) {
+  @include responsive(sm) {
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    background-color: gray;
+    flex-direction: column;    
+
+    .mapContainer{
+      width: 100%;
+    }
 
     .grid {
+      width: 100%;
+    }
+
+  }
+
+   @include responsive(xs) {
+    .socialNetwork{
       width: 100%;
     }
   }
@@ -142,6 +150,7 @@
     align-items: flex-start;
     justify-content: flex-start;
     gap: 10px;
+    flex-wrap: wrap;
 
     .socialNetwork {
       display: flex;
@@ -167,14 +176,6 @@
       &:hover {
         cursor: pointer;
         background-color: $brand-light;
-
-        span {
-          color: $brand;
-        }
-
-        svg {
-          color: $brand;
-        }
       }
     }
   }
