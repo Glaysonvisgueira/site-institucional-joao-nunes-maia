@@ -62,6 +62,23 @@ body {
   font-family: $font-family;
   overflow-x: hidden;
   scroll-behavior: smooth;
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #cfcfcf;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: $brand;
+  }
+
+  ::selection {
+    background: $brand;
+    color: $text;
+  }
 }
 
 body {

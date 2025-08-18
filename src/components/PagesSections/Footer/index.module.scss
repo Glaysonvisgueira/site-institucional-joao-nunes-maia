@@ -20,11 +20,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  // border-top: 1px solid #929292;
   padding: 20px 30px;
 
-  span{
+  span {
     color: $text;
     font-size: 0.875rem;
+  }
+
+  @include responsive(sm) {
+    flex-direction: column;
+
+    span {
+      text-align: center;
+    }
   }
 }

@@ -18,7 +18,7 @@
   flex-direction: column;
   gap: 20px;
   width: 100%;
-  
+
   .faqItem {
     width: 100%;
     background: #fff;
@@ -26,22 +26,25 @@
     padding: 1.5rem;
     cursor: pointer;
     transition: box-shadow 0.3s ease;
+    border: 2px solid transparent;
 
     &:hover {
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border: 2px solid $brand;
     }
 
     .question {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
 
-        svg{
-          width: 22px;
-          height: 22px;
-        }
+      svg {
+        width: 22px;
+        height: 22px;
+      }
 
-      h3{
+      h3 {
+        font-size: 1rem;
         font-weight: 600;
       }
     }
@@ -50,33 +53,33 @@
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.3s ease, padding 0.3s ease;
-      padding-top: 0;
       margin: 0;
+      padding: 0 20px;
     }
 
     &.active {
       .answer {
-        max-height: 500px; 
+        max-height: 500px;
         padding-top: 1rem;
       }
 
-       .question {
-        h3, svg{
+      .question {
+        h3,
+        svg {
           color: $brand;
         }
-    }
+      }
     }
 
-    @include responsive(md){
-      .question{
-        h3{
-font-size: 0.875rem;
+    @include responsive(md) {
+      .question {
+        h3 {
+          font-size: 0.875rem;
         }
       }
 
-      .answer{
-font-size: 0.775rem;
-
+      .answer {
+        font-size: 0.775rem;
       }
     }
   }

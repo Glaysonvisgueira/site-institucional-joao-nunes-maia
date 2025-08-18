@@ -135,49 +135,44 @@ function ArrowSvg(props: React.ComponentProps<'svg'>) {
 
 const overviewLinks = [
   {
-    href: '/react/overview/quick-start',
+    href: '#1',
     title: 'Palestras Públicas',
-    description: 'Install and assemble your first component.',
+    description: 'Reflexões semanais sobre o Evangelho e a vida.',
   },
   {
-    href: '/react/overview/accessibility',
+    href: '#2',
     title: 'Evangelização Infantil',
-    description: 'Learn how we build accessible components.',
+    description: 'Aprendizado do Evangelho de forma lúdica e fraterna.',
   },
   {
-    href: '/react/overview/releases',
+    href: '#3',
     title: 'ESDE',
-    description: 'See what’s new in the latest Base UI versions.',
+    description: 'Estudo sistematizado da Doutrina Espírita em grupo.',
   },
   {
-    href: '/react/overview/about',
+    href: '#4',
     title: 'Grupos de estudo',
-    description: 'Learn more about Base UI and our mission.',
-  },
-  {
-    href: '/react/overview/creche',
-    title: 'Creche Fernando Miramez',
-    description: 'Learn more about Base UI and our mission.',
+    description: 'Encontros de aprendizado e troca fraterna.',
   },
 ] as const;
 
 const handbookLinks = [
   {
-    href: '/react/handbook/styling',
-    title: 'Styling',
+    href: '#1',
+    title: 'Creche Fernando Miramez',
     description:
-      'Base UI components can be styled with plain CSS, Tailwind CSS, CSS-in-JS, or CSS Modules.',
+      'Cuidado e aprendizado para crianças em fase inicial.',
   },
   {
-    href: '/react/handbook/animation',
-    title: 'Animation',
+    href: '#2',
+    title: 'Serviço de convivência',
     description:
-      'Base UI components can be animated with CSS transitions, CSS animations, or JavaScript libraries.',
+      'Atividades que fortalecem vínculos e cidadania.',
   },
   {
-    href: '/react/handbook/composition',
-    title: 'Composition',
+    href: '#3',
+    title: 'Aulas de música',
     description:
-      'Base UI components can be replaced and composed with your own existing components.',
-  },
+      'Educação musical para expressão e desenvolvimento.',
+  }
 ] as const;

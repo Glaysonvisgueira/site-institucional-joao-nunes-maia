@@ -28,6 +28,18 @@ const faqData: FaqItem[] = [
     question: 'Quem pode receber ajuda?',
     answer: 'Qualquer pessoa ou família que esteja em situação de vulnerabilidade social pode ser atendida pelo nosso projeto.'
   },
+  {
+    question: 'O que é o nosso trabalho de caridade?',
+    answer: 'Nosso trabalho envolve apoio a pessoas em situação de vulnerabilidade, distribuindo cestas básicas, fichas de atendimento e suporte em creches.'
+  },
+  {
+    question: 'Como posso participar das ações?',
+    answer: 'Você pode se voluntariar ou fazer doações entrando em contato pelo nosso site ou redes sociais.'
+  },
+  {
+    question: 'Quem pode receber ajuda?',
+    answer: 'Qualquer pessoa ou família que esteja em situação de vulnerabilidade social pode ser atendida pelo nosso projeto.'
+  },
 ];
 
 export default function Faq() {
@@ -52,10 +64,10 @@ export default function Faq() {
             onClick={() => toggleFaq(index)}
           >
             <div className={styles.question}>
-            <h3>{item.question}</h3>
-            {activeIndex === index ? <IoIosArrowUp />: <IoIosArrowDown /> }
-            
-              </div>
+              <h3>{item.question}</h3>
+              {activeIndex === index ? <IoIosArrowUp /> : <IoIosArrowDown />}
+
+            </div>
             <p className={styles.answer}>{item.answer}</p>
           </div>
         ))}

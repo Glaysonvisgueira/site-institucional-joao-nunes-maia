@@ -1,5 +1,6 @@
 'use client';
 import styles from './index.module.scss';
+import Image from "next/image";
 
 //Icons
 import { FaArrowRight } from "react-icons/fa6";
@@ -80,7 +81,14 @@ function Card({
       <div>
 
         <div className={styles.imgContainer}>
-          <MdNoPhotography />
+          {/* <MdNoPhotography /> */}
+          <Image
+            src="/imgs/maos_dadas.jpg"
+            alt="Mãos dadas"
+            fill
+            style={{ objectFit: "cover" }} // cobre todo o espaço mantendo proporção
+            priority // carrega logo de início (opcional)
+          />
         </div>
 
         <div className={styles.content}>

@@ -23,10 +23,11 @@
     justify-content: flex-start;
     flex-direction: column;
     width: 60%;
-    height: 400px;
-    border: 2px solid $border-gray;
+    height: 480px;
     border-radius: $radius-md;
     overflow: hidden;
+    background-color: #fff;
+    border: 2px solid #fff;
 
     .header {
       display: flex;
@@ -36,22 +37,32 @@
       width: 100%;
       padding: 24px;
       background-color: $brand-light;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
       gap: 5px;
+      border-bottom: 2px solid #fff;
 
       h4 {
         font-family: $font-family;
         color: $text;
         font-weight: 700;
+        font-size: 1rem;
       }
 
       span {
         font-family: $font-family;
         color: $text;
+        font-size: 1rem;
+      }
+
+      @include responsive(sm) {
+        span {
+          font-size: 0.875rem;
+        }
       }
     }
 
     .map {
-      background-color: #f8f8f8;
       display: flex;
       align-items: flex-start;
       justify-content: flex-start;
@@ -106,7 +117,7 @@
         span {
           font-family: $font-family;
           color: $text;
-          flex-wrap: wrap;  
+          flex-wrap: wrap;
         }
       }
     }
@@ -115,26 +126,26 @@
   @include responsive(sm) {
     align-items: center;
     justify-content: center;
-    flex-direction: column;    
+    flex-direction: column;
 
-    .mapContainer{
+    .mapContainer {
       width: 100%;
     }
 
     .grid {
       width: 100%;
     }
-
   }
 
-   @include responsive(xs) {
-    .socialNetwork{
+  @include responsive(xs) {
+    .socialNetwork {
       width: 100%;
     }
   }
 }
 
 .socialNetworksContainer {
+  @include container-responsive();
   display: flex;
   flex-direction: column;
 
@@ -178,5 +189,9 @@
         background-color: $brand-light;
       }
     }
+  }
+
+  @include responsive(sm) {
+    margin-top: 10px;
   }
 }
